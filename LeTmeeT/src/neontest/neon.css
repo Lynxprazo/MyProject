@@ -1,0 +1,13 @@
+#neon-cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0ff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    transition: transform 0.1s, box-shadow 0.1s;
+    transform: translate(-50%, -50%);
+}
+  
+  

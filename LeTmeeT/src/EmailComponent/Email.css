@@ -1,0 +1,64 @@
+.email-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.email-form h1{
+    width: 100%;
+}
+.email-form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    width: 30%;
+    height: 69vh;
+    color: white;
+    gap:10px;
+    backdrop-filter:blur(20px);
+    z-index: 120;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset,
+     rgb(18, 142, 4) 3px 3px 6px 0px inset, rgba(4, 14, 2, 0.5) -3px -3px 6px 1px inset;
+
+}
+.email-form div{
+    margin: 10px;
+}
+.email-form div input[type = "email"],input[type ="password"] , input[type ="text"],textarea{
+width: 40svh;
+font-size:1.1rem;
+border: none;
+background: transparent;
+border-bottom: 1.5px solid rgb(116, 184, 15);
+outline: none;
+color:aliceblue
+}
+.email-form div button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    color: black;
+    font-size: 16px;
+    margin-left: 60px;
+    backdrop-filter: blur(20px);
+    border-radius: 8px;
+    width: 50%;
+    height: 4svh;
+    cursor: pointer;
+    transition: ease 800ms;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset
+     
+  
+}
+.email-form div button:hover{
+    transform: scale(1.2) translateY(3px);
+    background-color: rgb(58, 58, 244);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

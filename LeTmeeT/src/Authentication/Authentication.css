@@ -1,0 +1,560 @@
+.Auth-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 0%;
+  margin: 0%;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.Auth-container form {
+  width: 35%;
+  flex-direction: column;
+}
+.Auth-background {
+  border: 2px solid rgb(15, 35, 15);
+  height: 75%;
+  margin-top: 25%;
+  border-radius: 10px;
+  background: whitesmoke;
+  box-shadow: rgba(0, 23, 23, 0.8) 0px 54px 55px,
+    rgba(0, 234, 23, 0.8) 0px -12px 30px, rgba(0, 234, 0, 0.12) 0px 4px 6px,
+    rgba(0, 234, 13, 0.8) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset,
+    rgb(0, 223, 0.08) 3px 3px 6px 0px inset,
+    rgba(0, 255, 255, 0.5) -3px -3px 6px 1px inset,
+    rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 234, 0, 0.6) 0px -3px 0px inset,
+    rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+.Auth-background div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Auth-title {
+  height: 17vh;
+  border-top: 2px dotted rgb(43, 70, 226);
+  background-image: linear-gradient(to bottom right, #151c28, #1a2a2f);
+  border-radius: 2%;
+  border-bottom: 6px double rgb(235, 60, 60);
+  border-bottom-left-radius: 140px;
+  margin-bottom: 100px;
+  border-top-right-radius: 140px;
+  border-radius:inherit;
+  z-index: 2;
+
+}
+.Auth-background div input[type="text"] {
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  border-bottom: 4px solid rgb(64, 51, 178);
+  outline: none;
+  height: 4vh;
+  color: rgb(4, 45, 80);
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.Auth-background div input[type="email"] {
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  border-bottom: 4px solid rgb(64, 51, 178);
+  outline: none;
+  height: 4vh;
+  color: rgb(4, 45, 80);
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.Auth-background div input[type="password"] {
+  width: 60%;
+  border-radius: 10px;
+  height: 4vh;
+  border: none;
+  font-size: 14px;
+  border-bottom: 4px solid rgb(64, 51, 178);
+  outline: none;
+  color: rgb(4, 45, 80);
+  background: transparent;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.Auth-background div button {
+  width: 70%;
+  border-radius: 30px;
+  background-color: rgb(208, 125, 232);
+  height: 6vh;
+  border: none;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all ease 200ms;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.Auth-background div button:hover {
+  transform: scale(1.1);
+  color: aliceblue;
+  background-color: rgb(207, 55, 55);
+}
+.Auth-background div label {
+  margin-right: 46%;
+  color: rgb(85, 245, 85);
+  transform: translateY(-24px);
+}
+.Auth-background div input[type="text"]:focus ~ .Auth-usr,
+.Auth-background div input[type="text"]:valid ~ .Auth-usr {
+  transform: translateY(-52px);
+  transition: all ease 500ms;
+  color: rgb(0, 191, 255);
+}
+.Auth-background div input[type="password"]:focus ~ .Auth-pwd,
+.Auth-background div input[type="password"]:valid ~ .Auth-pwd {
+  transform: translateY(-52px);
+  transition: all ease 500ms;
+  color: rgb(0, 191, 255);
+}
+.Auth-background div input[type="email"]:focus ~ .Auth-email,
+.Auth-background div input[type="email"]:valid ~ .Auth-email {
+  transform: translateY(-52px);
+  transition: all ease 500ms;
+  color: rgb(0, 191, 255);
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateX(106px);
+    opacity: 0;
+  }
+  2% {
+    transform: translateX(104px);
+    opacity: 0.02;
+  }
+  4% {
+    transform: translateX(102px);
+    opacity: 0.04;
+  }
+  6% {
+    transform: translateX(100px);
+    opacity: 0.06;
+  }
+  8% {
+    transform: translateX(98px);
+    opacity: 0.08;
+  }
+  10% {
+    transform: translateX(96px);
+    opacity: 0.1;
+  }
+  12% {
+    transform: translateX(94px);
+    opacity: 0.12;
+  }
+  14% {
+    transform: translateX(92px);
+    opacity: 0.14;
+  }
+  16% {
+    transform: translateX(90px);
+    opacity: 0.16;
+  }
+  18% {
+    transform: translateX(88px);
+    opacity: 0.18;
+  }
+  20% {
+    transform: translateX(86px);
+    opacity: 0.2;
+  }
+  22% {
+    transform: translateX(84px);
+    opacity: 0.22;
+  }
+  24% {
+    transform: translateX(82px);
+    opacity: 0.24;
+  }
+  26% {
+    transform: translateX(80px);
+    opacity: 0.26;
+  }
+  28% {
+    transform: translateX(78px);
+    opacity: 0.28;
+  }
+  30% {
+    transform: translateX(76px);
+    opacity: 0.3;
+  }
+  32% {
+    transform: translateX(74px);
+    opacity: 0.32;
+  }
+  34% {
+    transform: translateX(72px);
+    opacity: 0.34;
+  }
+  36% {
+    transform: translateX(70px);
+    opacity: 0.36;
+  }
+  38% {
+    transform: translateX(68px);
+    opacity: 0.38;
+  }
+  40% {
+    transform: translateX(66px);
+    opacity: 0.4;
+  }
+  42% {
+    transform: translateX(64px);
+    opacity: 0.42;
+  }
+  44% {
+    transform: translateX(62px);
+    opacity: 0.44;
+  }
+  46% {
+    transform: translateX(60px);
+    opacity: 0.46;
+  }
+  48% {
+    transform: translateX(58px);
+    opacity: 0.48;
+  }
+  50% {
+    transform: translateX(56px);
+    opacity: 0.5;
+  }
+  52% {
+    transform: translateX(54px);
+    opacity: 0.52;
+  }
+  54% {
+    transform: translateX(52px);
+    opacity: 0.54;
+  }
+  56% {
+    transform: translateX(50px);
+    opacity: 0.56;
+  }
+  58% {
+    transform: translateX(48px);
+    opacity: 0.58;
+  }
+  60% {
+    transform: translateX(46px);
+    opacity: 0.6;
+  }
+  62% {
+    transform: translateX(44px);
+    opacity: 0.62;
+  }
+  64% {
+    transform: translateX(42px);
+    opacity: 0.64;
+  }
+  66% {
+    transform: translateX(40px);
+    opacity: 0.66;
+  }
+  68% {
+    transform: translateX(38px);
+    opacity: 0.68;
+  }
+  70% {
+    transform: translateX(36px);
+    opacity: 0.7;
+  }
+  72% {
+    transform: translateX(34px);
+    opacity: 0.72;
+  }
+  74% {
+    transform: translateX(32px);
+    opacity: 0.74;
+  }
+  76% {
+    transform: translateX(30px);
+    opacity: 0.76;
+  }
+  78% {
+    transform: translateX(28px);
+    opacity: 0.78;
+  }
+  80% {
+    transform: translateX(26px);
+    opacity: 0.8;
+  }
+  82% {
+    transform: translateX(24px);
+    opacity: 0.82;
+  }
+  84% {
+    transform: translateX(22px);
+    opacity: 0.84;
+  }
+  86% {
+    transform: translateX(20px);
+    opacity: 0.86;
+  }
+  88% {
+    transform: translateX(18px);
+    opacity: 0.88;
+  }
+  90% {
+    transform: translateX(16px);
+    opacity: 0.9;
+  }
+  92% {
+    transform: translateX(14px);
+    opacity: 0.92;
+  }
+  94% {
+    transform: translateX(12px);
+    opacity: 0.94;
+  }
+  96% {
+    transform: translateX(10px);
+    opacity: 0.96;
+  }
+  98% {
+    transform: translateX(8px);
+    opacity: 0.98;
+  }
+  100% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+}
+.Goto {
+  cursor: pointer;
+  transition: all ease 300ms;
+}
+.Goto:hover {
+  transform: scale(1.5);
+  color: rgb(28, 28, 209.02);
+
+  
+}
+
+/* @keyframes slideup {
+  0% {
+    transform: translateX(6px);
+    opacity: 1;
+  }
+  2% {
+    transform: translateX(8px);
+    opacity: 0.98;
+  }
+  4% {
+    transform: translateX(10px);
+    opacity: 0.96;
+  }
+  6% {
+    transform: translateX(12px);
+    opacity: 0.94;
+  }
+  8% {
+    transform: translateX(14px);
+    opacity: 0.92;
+  }
+  10% {
+    transform: translateX(16px);
+    opacity: 0.9;
+  }
+  12% {
+    transform: translateX(18px);
+    opacity: 0.88;
+  }
+  14% {
+    transform: translateX(20px);
+    opacity: 0.86;
+  }
+  16% {
+    transform: translateX(22px);
+    opacity: 0.84;
+  }
+  18% {
+    transform: translateX(24px);
+    opacity: 0.82;
+  }
+  20% {
+    transform: translateX(26px);
+    opacity: 0.8;
+  }
+  22% {
+    transform: translateX(28px);
+    opacity: 0.78;
+  }
+  24% {
+    transform: translateX(30px);
+    opacity: 0.76;
+  }
+  26% {
+    transform: translateX(32px);
+    opacity: 0.74;
+  }
+  28% {
+    transform: translateX(34px);
+    opacity: 0.72;
+  }
+  30% {
+    transform: translateX(36px);
+    opacity: 0.7;
+  }
+  32% {
+    transform: translateX(38px);
+    opacity: 0.68;
+  }
+  34% {
+    transform: translateX(40px);
+    opacity: 0.66;
+  }
+  36% {
+    transform: translateX(42px);
+    opacity: 0.64;
+  }
+  38% {
+    transform: translateX(44px);
+    opacity: 0.62;
+  }
+  40% {
+    transform: translateX(46px);
+    opacity: 0.6;
+  }
+  42% {
+    transform: translateX(48px);
+    opacity: 0.58;
+  }
+  44% {
+    transform: translateX(50px);
+    opacity: 0.56;
+  }
+  46% {
+    transform: translateX(52px);
+    opacity: 0.54;
+  }
+  48% {
+    transform: translateX(54px);
+    opacity: 0.52;
+  }
+  50% {
+    transform: translateX(56px);
+    opacity: 0.5;
+  }
+  52% {
+    transform: translateX(58px);
+    opacity: 0.48;
+  }
+  54% {
+    transform: translateX(60px);
+    opacity: 0.46;
+  }
+  56% {
+    transform: translateX(62px);
+    opacity: 0.44;
+  }
+  58% {
+    transform: translateX(64px);
+    opacity: 0.42;
+  }
+  60% {
+    transform: translateX(66px);
+    opacity: 0.4;
+  }
+  62% {
+    transform: translateX(68px);
+    opacity: 0.38;
+  }
+  64% {
+    transform: translateX(70px);
+    opacity: 0.36;
+  }
+  66% {
+    transform: translateX(72px);
+    opacity: 0.34;
+  }
+  68% {
+    transform: translateX(74px);
+    opacity: 0.32;
+  }
+  70% {
+    transform: translateX(76px);
+    opacity: 0.3;
+  }
+  72% {
+    transform: translateX(78px);
+    opacity: 0.28;
+  }
+  74% {
+    transform: translateX(80px);
+    opacity: 0.26;
+  }
+  76% {
+    transform: translateX(82px);
+    opacity: 0.24;
+  }
+  78% {
+    transform: translateX(84px);
+    opacity: 0.22;
+  }
+  80% {
+    transform: translateX(86px);
+    opacity: 0.2;
+  }
+  82% {
+    transform: translateX(88px);
+    opacity: 0.18;
+  }
+  84% {
+    transform: translateX(90px);
+    opacity: 0.16;
+  }
+  86% {
+    transform: translateX(92px);
+    opacity: 0.14;
+  }
+  88% {
+    transform: translateX(94px);
+    opacity: 0.12;
+  }
+  90% {
+    transform: translateX(96px);
+    opacity: 0.1;
+  }
+  92% {
+    transform: translateX(98px);
+    opacity: 0.08;
+  }
+  94% {
+    transform: translateX(100px);
+    opacity: 0.06;
+  }
+  96% {
+    transform: translateX(102px);
+    opacity: 0.04;
+  }
+  98% {
+    transform: translateX(104px);
+    opacity: 0.02;
+  }
+  100% {
+    transform: translateX(106px);
+    opacity: 0;
+  }
+} */
+
+.slideup-animation {
+  animation: slideup 2s ease-in-out forwards;
+}
