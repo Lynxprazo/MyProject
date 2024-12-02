@@ -1,1 +1,1 @@
-hello world!
+Fun Project
