@@ -4,6 +4,7 @@ import Authentication from './Authentication/Authentication';
 import NeonCursor from './neontest/Neon';
 import Email from './EmailComponent/Email';
 import Home from './Home/home';
+import MainComponent from './Main/mainComponent';
 
 const App = () => {
   return (
@@ -22,6 +23,9 @@ const App = () => {
       </Routes>
       <Routes>
           <Route path='/' element ={<Home/>}Route/>
+      </Routes>
+      <Routes>
+          <Route path='/maincomponet' element ={<MainComponent/>}Route/>
       </Routes>
 
 

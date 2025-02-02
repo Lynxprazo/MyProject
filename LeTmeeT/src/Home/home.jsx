@@ -6,22 +6,24 @@ import { IoAdd } from "react-icons/io5";
 import Invited from "../Invited/Invited";
 
 const Home = () => {
-  const[isInvitedshow,setisInvitedshow] = useState(false)
+  const [isInvitedshow, setisInvitedshow] = useState(false);
   const [Clicked, setClicked] = useState();
   const [Name, setName] = useState(false);
-  const [InvName, setInvName] = useState(false)
+  const [InvName, setInvName] = useState(false);
   const [showEmail, SetEmail] = useState(false);
   const handlechangeTitle = () => {
     setClicked(!Clicked);
   };
-  const handleInvited = () =>{
+  const handleInvited = () => {
     setisInvitedshow(!isInvitedshow);
-    setInvName(!InvName)
-  }
+    setInvName(!InvName);
+  };
 
   return (
     <div>
-     <div><Nav/></div> 
+      <div>
+        <Nav />
+      </div>
 
       <div className="homeMain-container">
         <div
@@ -38,8 +40,15 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <span className="List">
+          <p>Group-Summary</p>
+        </span>
         <span className="Invite" onClick={handleInvited}>
-          <p>{InvName ? "CloseInvited" : "ShowInvited"}<IoAdd /></p>
+          <p>
+            {InvName ? "CloseInvited" : "ShowInvited"}
+            <IoAdd />
+          </p>
+
           <p
             className="email-button"
             onClick={() => {
@@ -50,17 +59,18 @@ const Home = () => {
             {Name ? "HideEmail" : "ShowEmail"}
           </p>
         </span>
-        <span>
 
-        </span>
-
-        
-        {
-          showEmail && <div className={showEmail ? "AnimationEmail" :"AnimationEmailhide"}> <Email/> </div>
-        }
-        {
-          isInvitedshow && <div className={isInvitedshow  ? "AnimationListInvited" : ""}><Invited/></div>
-        }
+        {showEmail && (
+          <div className={showEmail ? "AnimationEmail" : "AnimationEmailhide"}>
+            {" "}
+            <Email />{" "}
+          </div>
+        )}
+        {isInvitedshow && (
+          <div className={isInvitedshow ? "AnimationListInvited" : ""}>
+            <Invited />
+          </div>
+        )}
       </div>
     </div>
   );
